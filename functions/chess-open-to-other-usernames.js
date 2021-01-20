@@ -15,12 +15,13 @@ exports.handler = async function(context, event, callback) {
       const win = rapid_record.win;
       const loss = rapid_record.loss;
       const draw = rapid_record.draw;
-      const rapid_best = chess_rapid.best.rating;
+      const rapid_best = chess_rapid.best;
+      const rapid_best_rating = rapid_best.rating;
       const rapid_last = chess_rapid.last.rating;
       const unix_timestamp = rapid_best.date;
       var date = new Date(unix_timestamp * 1000);
       date = date.toDateString(); // outputs to "Thu May 28 2015 format"
-      twiml.message(`${username}'s rapid record: ${win} wins, ${loss} losses, ${draw} draws. Current rapid rating: ${rapid_last}, best rapid rating: ${rapid_best} from ${date}`);
+      twiml.message(`${username}'s rapid record: ${win} wins, ${loss} losses, ${draw} draws. Current rapid rating: ${rapid_last}, best rapid rating: ${rapid_best_rating} from ${date}`);
       callback(null, twiml);
     }
   
