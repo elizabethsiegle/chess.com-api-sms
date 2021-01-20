@@ -1,4 +1,6 @@
-Monitor chess progress using [Twilio Functions](https://www.twilio.com/console/functions/manage), [Twilio Serverless Toolkit](https://www.twilio.com/docs/labs/serverless-toolkit) SMS, and the [chess.com API](https://www.chess.com/news/view/published-data-api).
+### Monitor chess progress using [Twilio Functions](https://www.twilio.com/console/functions/manage), [Twilio Serverless Toolkit](https://www.twilio.com/docs/labs/serverless-toolkit) SMS, and the [chess.com API](https://www.chess.com/news/view/published-data-api)
+
+![example SMS's](https://lh5.googleusercontent.com/yVBSptn9awlmDGmpPtEWvi_kGvMW6vsZGxbjdzLn3uDzQdC0oOg968xdAjFJHIkWLQXYrA1YVRa6GeHrA-YvKd7XAx9d79sBnYyL4ouZZKY4clUack1SmHktCzTmzneVBvQQMpTx)
 
 The code in `Functions/chess-open-to-other-usernames` parses an inbound text message and if it is a chess.com username, checks their stats and returns a text message containing some of their rapid chess game stats.
 
