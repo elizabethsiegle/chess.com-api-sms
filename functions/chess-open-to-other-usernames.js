@@ -19,8 +19,8 @@ exports.handler = async function(context, event, callback) {
       const rapid_last = chess_rapid.last.rating;
       const unix_timestamp = rapid_best.date;
       var date = new Date(unix_timestamp * 1000);
-      date =date.toDateString(); // outputs to "Thu May 28 2015 format"
-      twiml.message(`${username}'s rapid record: ${win} wins, ${loss} losses, ${draw} draws. Current rapid rating: ${rapid_last}, best rapid rating: ${rating} from ${date}`);
+      date = date.toDateString(); // outputs to "Thu May 28 2015 format"
+      twiml.message(`${username}'s rapid record: ${win} wins, ${loss} losses, ${draw} draws. Current rapid rating: ${rapid_last}, best rapid rating: ${rapid_best} from ${date}`);
       callback(null, twiml);
     }
   
