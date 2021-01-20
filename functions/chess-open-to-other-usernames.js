@@ -19,7 +19,7 @@ exports.handler = async function(context, event, callback) {
         const rating = rapid_best.rating;
         const unix_timestamp = rapid_best.date;
         var date = new Date(unix_timestamp * 1000);
-        date =date.toLocaleString(); // outputs to "Thu May 28 2015"
+        date =date.toDateString(); // outputs to "Thu May 28 2015"
         twiml.message(`${username}'s rapid record: ${win} wins, ${loss} losses, ${draw} draws. Their rapid_best rating: ${rating} from ${date}`);
         
         callback(null, twiml);

@@ -1,7 +1,6 @@
 const got = require('got');
 const username = 'lizziepika'
 const stats_url = `https://api.chess.com/pub/player/${username}/stats`;
-const profile_url = `https://api.chess.com/pub/player/${username}`
 exports.handler = async function(context, event, callback) {
   const twiml = new Twilio.twiml.MessagingResponse();
   const stats_resp = await got(stats_url);
